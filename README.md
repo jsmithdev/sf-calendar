@@ -113,8 +113,23 @@ Having the calendar rerender automatically is handled by using platform events. 
   - Paste the API Name into the Platform Event Name field
   ![image](https://user-images.githubusercontent.com/36901822/189165307-fde17426-9bf1-4561-8bc7-1a9b6d913e69.png)
 
+## SFDX Deploy
 
+Covert with SFDX; This creates a folder called `mdapiout`
 
+```bash
+sfdx force:source:convert -r force-app -d mdapiout
+```
 
+Now you can deploy from the resulting `mdapiout` directory
 
+```bash
+sfdx force:mdapi:deploy -d mdapiout -w -1 --verbose
+```
 
+📌 Above deploys to the default org set
+
+- Add `-u user@domain.com` or `-u alias` to deploy else where
+- To run tests add `-l RunSpecifiedTests -r ApexTestName`
+
+> with default org set and node installed, you can use the package shortcuts `npm run convert` and `npm run deploy`
