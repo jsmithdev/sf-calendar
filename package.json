@@ -14,7 +14,7 @@
     "prettier": "prettier --write \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "prettier:verify": "prettier --list-different \"**/*.{cls,cmp,component,css,html,js,json,md,page,trigger,xml,yaml,yml}\"",
     "convert": "sfdx force:source:convert -r force-app -d mdapiout",
-    "deploy": "sfdx force:mdapi:deploy -d mdapiout -w 10"
+    "deploy": "sfdx force:mdapi:deploy -d mdapiout -w 10 --verbose"
   },
   "devDependencies": {
     "@prettier/plugin-xml": "^0.7.2",
