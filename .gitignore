@@ -33,3 +33,7 @@ Thumbs.db
 ehthumbs.db
 [Dd]esktop.ini
 $RECYCLE.BIN/
+
+# auto created during deployments
+.sf/config.json
+mdapiout
